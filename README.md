@@ -1,8 +1,5 @@
-## Sobre
 
-Boilerplate foi desenvolvido durante o curso de [React Avançado](https://reactavancado.com.br/) 
-ministrado por [Willian Justen](https://github.com/willianjusten) e tem o objetivo de servir como
-estrutura reutilizável pré-configurada para futuros projetos.
+![React Avançado](https://raw.githubusercontent.com/React-Avancado/boilerplate/master/public/img/logo-gh.svg)
 
 ## Stacks
 
