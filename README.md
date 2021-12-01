@@ -1,7 +1,10 @@
 
-![React Avançado](https://raw.githubusercontent.com/React-Avancado/boilerplate/master/public/img/logo-gh.svg)
+# Ease quick start to your NextJS projects
 
-## Stacks
+Don't lose time reinventing the wheel, just use these boilerplate to get started.
+
+---
+## This project uses lot of stuff as:
 
 - [TypeScript](https://www.typescriptlang.org/)
 - [NextJS](https://nextjs.org/)
@@ -13,27 +16,36 @@
 - [Prettier](https://prettier.io/)
 - [Husky](https://github.com/typicode/husky)
 
-## Iniciando
+## Getting Started
 
-Execute o projeto em modo de desenvolvimento:
+Create a new project using us as exemple:
 
 ```bash
-npm run dev
-# or
+yarn create next-app -e https://github.com/vczb/boilerplate
+```
+
+All is done, you can start developing:
+
+```bash
 yarn dev
 ```
 
-Abra [http://localhost:3000](http://localhost:3000) no seu navegador.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-Você poderá modificar a página alterando o arquivo `pages/index.js`.
+## Available commands
 
-## Comandos
+- `dev`: run the application in development mode `localhost:3000`
+- `build`: create production version
+- `start`: run production version
+- `storybook`: run the storybook at the address `localhost:6006`
+- `eslint:check`: runs linter on all components and pages
+- `prettier:check`: check formatting on all components and pages
+- `prettier:format`: formats all components and pages
 
-- `dev`: executa a aplicação em modo desenvolvimento `localhost:3000`
-- `build`: cria a versão de produção
-- `start`: executa a versão de produção
-- `lint`: executa o linter em todos os componentes e páginas
-- `test`: executa testes em todos os componentes e páginas
-- `test:watch`: executa o jest em modo de observação 
-- `storybook`: carrega o history book no endereço  `localhost:6006`
-- `build-storybook`: cria versão do history book para produção
+## Contributing
+
+You are welcome.
+
+## Licence
+
+This project is licensed under the [MIT](./LICENSE) License.
