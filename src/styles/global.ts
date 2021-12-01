@@ -1,20 +1,41 @@
-import { createGlobalStyle } from 'styled-components'
+import {
+  createGlobalStyle,
+  GlobalStyleComponent,
+  css,
+  DefaultTheme
+} from 'styled-components'
 
-const GlobalStyles = createGlobalStyle`
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  html {
-    font-size: 62.5%;
-  }
-  html, body, #__next {
-    height: 100%;
-  }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
-  }
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const GlobalStyles: GlobalStyleComponent<any, DefaultTheme> = createGlobalStyle`
+  ${({ theme }) => css`
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      font-size: 62.5%;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+    }
+    html,
+    body,
+    #__next {
+      height: 100%;
+    }
+    body {
+      font-family: ${theme.font.family};
+      font-size: ${theme.font.sizes.small};
+    }
+    ul,
+    li {
+      list-style: none;
+    }
+    a {
+      text-decoration: none;
+      cursor: pointer;
+    }
+  `}
 `
 
 export default GlobalStyles
