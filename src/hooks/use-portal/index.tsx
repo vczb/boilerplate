@@ -1,4 +1,11 @@
-import { useState, createContext, ReactNode, useContext, Dispatch } from 'react'
+import {
+  useState,
+  useEffect,
+  createContext,
+  ReactNode,
+  useContext,
+  Dispatch
+} from 'react'
 
 type PortalProps = Element | ReactNode
 
@@ -7,13 +14,15 @@ type PortalContextData = {
   content?: PortalProps
   openPortal: Dispatch<PortalProps>
   closePortal: () => void
+  destroyPortal: () => void
 }
 
 export const PortalDefaultValues = {
   isOpen: false,
   content: null,
   openPortal: () => void 0,
-  closePortal: () => void 0
+  closePortal: () => void 0,
+  destroyPortal: () => void 0
 }
 
 export type PortalProviderProps = {
@@ -29,21 +38,25 @@ const PortalProvider = ({ children }: PortalProviderProps) => {
     PortalDefaultValues.content
   )
 
+  useEffect(() => {
+    setIsOpen(!!content)
+  }, [content])
+
   const openPortal = (el: PortalProps) => {
     if (el) {
       setContent(el)
-      setIsOpen(true)
     }
   }
 
   const closePortal = () => {
-    setContent(null)
     setIsOpen(false)
   }
 
+  const destroyPortal = () => setContent(null)
+
   return (
     <PortalContext.Provider
-      value={{ isOpen, content, openPortal, closePortal }}
+      value={{ isOpen, content, openPortal, closePortal, destroyPortal }}
     >
       {children}
     </PortalContext.Provider>

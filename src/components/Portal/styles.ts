@@ -8,7 +8,7 @@ export const Wrapper = styled.div<WrapperProps>`
   ${({ theme, isOpen }) => css`
     position: fixed;
     overflow: hidden;
-    background: ${theme.colors.overlays.dark};
+    background: transparent;
     z-index: ${theme.layers.overlay};
     top: 0;
     bottom: 0;
