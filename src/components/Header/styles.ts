@@ -1,6 +1,10 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
-export const Header = styled.header``
+export const Header = styled.header`
+  ${({ theme }) => css`
+    padding: ${theme.spacings.medium};
+  `}
+`
 
 export const Hamburger = styled.div`
   width: fit-content;
