@@ -5,6 +5,8 @@ import Head from 'next/head'
 
 import GlobalStyles from 'styles/global'
 import theme from 'styles/theme'
+import { PortalProvider } from 'hooks/use-portal'
+import Portal from 'components/Portal'
 
 function App({ Component, pageProps }: AppProps) {
   return (
@@ -18,7 +20,10 @@ function App({ Component, pageProps }: AppProps) {
         />
       </Head>
       <GlobalStyles />
-      <Component {...pageProps} />
+      <PortalProvider>
+        <Portal />
+        <Component {...pageProps} />
+      </PortalProvider>
     </ThemeProvider>
   )
 }
