@@ -16,7 +16,7 @@ export const Aside = styled.aside<Pick<SidebarProps, 'align'>>`
     position: relative;
     width: 100%;
     height: 100vh;
-    background: ${theme.colors.gradients.l180d};
+    background: ${theme.colors.primary.base};
     z-index: ${theme.layers.menu};
 
     ${media.sm`

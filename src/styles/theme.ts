@@ -23,29 +23,38 @@ export default {
     }
   },
   colors: {
+    white: '#FFFFFF',
+    black: '#000000',
     primary: {
-      lighter: '#1D9A6C',
-      light: '#188977',
-      base: '#137177',
-      dark: '#0E4D64',
-      darker: '#0A2F51'
+      lightest: '#D4E0FE',
+      lighter: '#BECFFD',
+      light: '#ADC0FB',
+      base: '#92A9F9',
+      dark: '#6A80D6',
+      darker: '#495CB3',
+      darkest: '#2E3D90'
     },
-    gradients: {
-      l90d: `linear-gradient(90deg, rgba(10,47,81,1) 0%, rgba(69,157,247,1) 100%, rgba(29,154,108,0.99) 100%);`,
-      l180d: `linear-gradient(180deg, rgba(10,47,81,1) 0%, rgba(69,157,247,1) 100%, rgba(29,154,108,0.99) 100%);`
+    secondary: {
+      lightest: '#FCE3B8',
+      lighter: '#F7CE94',
+      light: '#EFB777',
+      base: '#E5964C',
+      dark: '#C47437',
+      darker: '#C47437',
+      darkest: '#A45626'
+    },
+    linear: {
+      first: 'linear-gradient(90deg, #D4E0FE 0.21%, #2E3D90 99.77%);'
     },
     overlays: {
       dark: 'rgba(1, 0, 0, 0.95)'
     },
     gray: {
-      lighter: '#E4F5D8',
-      light: '#DFF0D3',
-      base: '#C7D6BC',
-      dark: '#A4B09B',
-      darker: '#687063'
-    },
-    white: '#FFFFFF',
-    black: '#000000'
+      light: '#FAFBFC',
+      base: '#F9FAFC',
+      dark: '#DADADD',
+      darker: '#BBBBBD'
+    }
   },
   spacings: {
     mini: '0.2rem',
