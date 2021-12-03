@@ -13,9 +13,11 @@ const asideModifier = {
 
 export const Aside = styled.aside<Pick<SidebarProps, 'align'>>`
   ${({ theme, align }) => css`
+    position: relative;
     width: 100%;
     height: 100vh;
     background: ${theme.colors.gradients.l180d};
+    z-index: ${theme.layers.menu};
 
     ${media.sm`
       width: 50vw;

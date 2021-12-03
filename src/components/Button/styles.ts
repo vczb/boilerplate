@@ -11,9 +11,11 @@ const buttonModifier = {
   `,
   fit: () => css`
     width: fit-content;
+    height: fit-content;
   `,
   full: () => css`
     width: 100%;
+    height: 100%;
   `,
   pointer: () => css`
     cursor: pointer;

@@ -60,8 +60,9 @@ export default {
     base: 10,
     popup: 20,
     overlay: 30,
-    modal: 40,
-    alwaysOnTop: 50
+    menu: 40,
+    modal: 50,
+    alwaysOnTop: 60
   },
   transition: {
     default: '0.3s ease-in-out',

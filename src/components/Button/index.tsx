@@ -5,7 +5,7 @@ import * as S from './styles'
 type ButtonTypes = ButtonHTMLAttributes<HTMLButtonElement>
 
 export type ButtonProps = {
-  children: ReactNode | string | null
+  children?: ReactNode | string | null
   size?: 'fit' | 'full'
   variant?: 'ghost'
   pointer?: boolean
