@@ -1,13 +1,12 @@
-import { usePortal } from 'hooks/use-portal'
-
 import * as S from './styles'
 
-const Portal = () => {
-  const { isOpen, content } = usePortal()
+export type PortalProps = {
+  children: React.ReactNode
+  isOpen?: boolean
+}
 
-  if (!content) return null
-
-  return <S.Wrapper isOpen={isOpen}>{content}</S.Wrapper>
+const Portal = ({ children, isOpen = false }: PortalProps) => {
+  return <S.Wrapper isOpen={isOpen}>{children}</S.Wrapper>
 }
 
 export default Portal
